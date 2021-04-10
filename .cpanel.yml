@@ -2,6 +2,6 @@
 deployment:
       tasks:
         - export DEPLOYPATH=/home/u8832552/public_html/admin
-        - export PRIVATEPATH=/home/u8832552/private/admin
+        - export PRIVATEPATH=/home/u8832552/private_admin
         - /bin/cp -r * $PRIVATEPATH
         - /bin/cp public/* $DEPLOYPATH
