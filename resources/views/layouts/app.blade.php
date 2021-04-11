@@ -9,6 +9,7 @@
 
     <!-- Main styles for this application-->
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     
     <!-- Stylesheets required by this view -->
     @stack('styles')

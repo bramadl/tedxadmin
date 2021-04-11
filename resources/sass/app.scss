@@ -1,1 +1,19 @@
 //
+// Style Profile Image
+.tx-profile-image {
+    border: 1px solid black;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-left: 6rem;
+    background-color: rgba(37, 8, 199, 0.856);
+    color: white;
+}
+.tx-profile-image h1 {
+    line-height: 300px;
+    font-size: 3rem;
+}
+.row-wrapper {
+    border: 1px solid black;
+}

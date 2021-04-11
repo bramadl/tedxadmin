@@ -14,3 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'home');
+Route::view('merch/pembelian','products.merchandise.pembelian.index');
+Route::view('merch/pembayaran','products.merchandise.pembayaran.index');
+
+
+Route::view('tickets/pembayaran','products.tickets.pembayaran.index');
+Route::view('tickets/pembelian','products.tickets.pembelian.index');
+
+Route::view('users/audiens', 'users.audiens.index');
+Route::view('users/volunteers', 'users.volunteers.index');
+Route::view('users/cores', 'users.cores.index');
+
+Route::view('account/profile', 'account.profile.index');
+Route::view('account/settings', 'account.settings.index');
+
+Route::view('auth/login', 'auth.login');
+Route::view('auth/register', 'auth.register');
