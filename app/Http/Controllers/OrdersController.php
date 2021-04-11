@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Audiens;
 use App\Order;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,8 @@ class OrdersController extends Controller
 
         // Masukkin ke database
         $order = Order::create([
+            "product" => $request->product,
+            "price" => $request->price,
             "username" => $request->username,
             "email" => $request->email,
             "phone_number" => $request->phone_number,
@@ -43,6 +46,37 @@ class OrdersController extends Controller
         return response()->json([
             "success" => true,
             "order" => $order
+        ]);
+    }
+
+    public function show(Request $request, $id, $username)
+    {
+        $user_id = $id;
+        $username = $username;
+        $payment_id = $request->query('payment_id');
+
+        $user = Audiens::find($user_id);
+        if (!$user) {
+            return response()->json([
+                "success" => false,
+                "message" => "User not found."
+            ]);
+        }
+
+        $order = Order::find($payment_id);
+        if (!$order) {
+            return response()->json([
+                "success" => false,
+                "message" => "User not found."
+            ]);
+        }
+
+        return response()->json([
+            "success" => true,
+            "data" => [
+                "user" => $user,
+                "order" => $order
+            ]
         ]);
     }
 }
