@@ -11,15 +11,15 @@
     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ url('/') }}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-speedometer') }}"></use>
-        </svg> Dashboard<span class="badge badge-info">NEW</span></a></li>
+        </svg> Dashboard</a></li>
     <li class="c-sidebar-nav-title">Kelola Produk</li>
     <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-cash') }}"></use>
         </svg> Merchandise</a>
       <ul class="c-sidebar-nav-dropdown-items">
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html"><span class="c-sidebar-nav-icon"></span> Pembelian</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/cards.html"><span class="c-sidebar-nav-icon"></span> Pembayaran</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('merch/pembelian')}}"><span class="c-sidebar-nav-icon"></span> Pembelian</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('merch/pembayaran')}}"><span class="c-sidebar-nav-icon"></span> Pembayaran</a></li>
       </ul>
     </li>
     <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
@@ -27,33 +27,33 @@
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-tags') }}"></use>
         </svg> Tickets</a>
       <ul class="c-sidebar-nav-dropdown-items">
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html"><span class="c-sidebar-nav-icon"></span> Pembelian</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/cards.html"><span class="c-sidebar-nav-icon"></span> Pembayaran</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('tickets/pembelian')}}"><span class="c-sidebar-nav-icon"></span> Pembelian</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('tickets/pembayaran')}}"><span class="c-sidebar-nav-icon"></span> Pembayaran</a></li>
       </ul>
     </li>
     <li class="c-sidebar-nav-title">Kelola Pengguna</li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('users/audiens')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-people') }}"></use>
         </svg> Audiens</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('users/volunteers')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-group') }}"></use>
         </svg> Volunteers</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('users/cores')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-group') }}"></use>
         </svg> Cores</a></li>
     <li class="c-sidebar-nav-title">Kelola Akun</li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('account/profile')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-user') }}"></use>
         </svg> Profile</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('account/settings')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-cog') }}"></use>
         </svg> Settings</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('auth/login')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-power-standby') }}"></use>
         </svg> Logout</a></li>
