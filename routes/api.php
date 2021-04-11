@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/audiens/{id}/verify/{token}', 'AudiensController@verify');
+Route::delete('/audiens/{uid}/logout/{token}', 'AudiensController@logout');
+
+Route::post('/orders', 'OrdersController@store');
