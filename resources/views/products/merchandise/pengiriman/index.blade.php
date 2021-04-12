@@ -5,7 +5,7 @@
 <ol class="breadcrumb border-0 m-0">
     <li class="breadcrumb-item">Home</li>
     <li class="breadcrumb-item">Merchandise</li>
-    <li class="breadcrumb-item active">Pembelian</li>
+    <li class="breadcrumb-item active">Pengiriman</li>
 </ol>
 <!-- Breadcrumb Menu-->
 @endsection
@@ -40,39 +40,35 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Pemesan</th>
-                                            <th>Email Pemesan</th>
                                             <th>Nomor Telepon</th>
                                             <th>Pesanan</th>
-                                            <th>Size</th>
-                                            <th>Warna</th>
-                                            <th>Tanggal Pembelian</th>
-                                            <th>Status</th>
+                                            <th>Alamat</th>
+                                            <th>Kelurahan</th>
+                                            <th>Kecamatan</th>
+                                            <th>Kota / Kabupaten</th>
+                                            <th>Provinsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($orders as $key => $order)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $order->username }}</td>
-                                            <td>{{ $order->email }}</td>
+                                            <td>
+                                              <a href="mailto:{{ $order->email }}" target="_blank">
+                                                {{ $order->username }}
+                                              </a>
+                                            </td>
                                             <td>
                                                 <a href="https://api.whatsapp.com/send?phone=+62{{ substr($order->phone_number, 1) }}" target="_blank">
                                                     {{ $order->phone_number }}
                                                 </a>
                                             </td>
                                             <td>{{ $order->product }}</td>
-                                            <td>{{ $order->size }}</td>
-                                            <td>{{ $order->color }}</td>
-                                            <td>{{ date('Y-m-d', strtotime($order->created_at)) }}</td>
-                                            <td>
-                                                @if ($order->status === 'pending')
-                                                <span class="badge badge-warning">{{ $order->status }}</span>
-                                                @elseif ($order->status === 'declined')
-                                                <span class="badge badge-danger">{{ $order->status }}</span>
-                                                @else
-                                                <span class="badge badge-success">{{ $order->status }}</span>
-                                                @endif
-                                            </td>
+                                            <td>{{ $order->address }}</td>
+                                            <td>{{ $order->kelurahan }}</td>
+                                            <td>{{ $order->kecamatan }}</td>
+                                            <td>{{ $order->kabupaten }}</td>
+                                            <td>{{ $order->provinsi }}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -93,13 +89,13 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Pemesan</th>
-                                            <th>Email Pemesan</th>
                                             <th>Nomor Telepon</th>
                                             <th>Pesanan</th>
-                                            <th>Size</th>
-                                            <th>Warna</th>
-                                            <th>Tanggal Pembelian</th>
-                                            <th>Status</th>
+                                            <th>Alamat</th>
+                                            <th>Kelurahan</th>
+                                            <th>Kecamatan</th>
+                                            <th>Kota / Kabupaten</th>
+                                            <th>Provinsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -107,26 +103,22 @@
                                         @if ($order->product === "Bundle A" || $order->product === "Bundle B")
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $order->username }}</td>
-                                            <td>{{ $order->email }}</td>
+                                            <td>
+                                              <a href="mailto:{{ $order->email }}" target="_blank">
+                                                {{ $order->username }}
+                                              </a>
+                                            </td>
                                             <td>
                                                 <a href="https://api.whatsapp.com/send?phone=+62{{ substr($order->phone_number, 1) }}" target="_blank">
                                                     {{ $order->phone_number }}
                                                 </a>
                                             </td>
                                             <td>{{ $order->product }}</td>
-                                            <td>{{ $order->size }}</td>
-                                            <td>{{ $order->color }}</td>
-                                            <td>{{ date('Y-m-d', strtotime($order->created_at)) }}</td>
-                                            <td>
-                                                @if ($order->status === 'pending')
-                                                <span class="badge badge-warning">{{ $order->status }}</span>
-                                                @elseif ($order->status === 'declined')
-                                                <span class="badge badge-danger">{{ $order->status }}</span>
-                                                @else
-                                                <span class="badge badge-success">{{ $order->status }}</span>
-                                                @endif
-                                            </td>
+                                            <td>{{ $order->address }}</td>
+                                            <td>{{ $order->kelurahan }}</td>
+                                            <td>{{ $order->kecamatan }}</td>
+                                            <td>{{ $order->kabupaten }}</td>
+                                            <td>{{ $order->provinsi }}</td>
                                         </tr>
                                         @endif
                                         @endforeach
@@ -148,13 +140,13 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Pemesan</th>
-                                            <th>Email Pemesan</th>
                                             <th>Nomor Telepon</th>
                                             <th>Pesanan</th>
-                                            <th>Size</th>
-                                            <th>Warna</th>
-                                            <th>Tanggal Pembelian</th>
-                                            <th>Status</th>
+                                            <th>Alamat</th>
+                                            <th>Kelurahan</th>
+                                            <th>Kecamatan</th>
+                                            <th>Kota / Kabupaten</th>
+                                            <th>Provinsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -162,26 +154,22 @@
                                         @if ($order->product === "E Money")
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $order->username }}</td>
-                                            <td>{{ $order->email }}</td>
+                                            <td>
+                                              <a href="mailto:{{ $order->email }}" target="_blank">
+                                                {{ $order->username }}
+                                              </a>
+                                            </td>
                                             <td>
                                                 <a href="https://api.whatsapp.com/send?phone=+62{{ substr($order->phone_number, 1) }}" target="_blank">
                                                     {{ $order->phone_number }}
                                                 </a>
                                             </td>
                                             <td>{{ $order->product }}</td>
-                                            <td>{{ $order->size }}</td>
-                                            <td>{{ $order->color }}</td>
-                                            <td>{{ date('Y-m-d', strtotime($order->created_at)) }}</td>
-                                            <td>
-                                                @if ($order->status === 'pending')
-                                                <span class="badge badge-warning">{{ $order->status }}</span>
-                                                @elseif ($order->status === 'declined')
-                                                <span class="badge badge-danger">{{ $order->status }}</span>
-                                                @else
-                                                <span class="badge badge-success">{{ $order->status }}</span>
-                                                @endif
-                                            </td>
+                                            <td>{{ $order->address }}</td>
+                                            <td>{{ $order->kelurahan }}</td>
+                                            <td>{{ $order->kecamatan }}</td>
+                                            <td>{{ $order->kabupaten }}</td>
+                                            <td>{{ $order->provinsi }}</td>
                                         </tr>
                                         @endif
                                         @endforeach
@@ -203,13 +191,13 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Pemesan</th>
-                                            <th>Email Pemesan</th>
                                             <th>Nomor Telepon</th>
                                             <th>Pesanan</th>
-                                            <th>Size</th>
-                                            <th>Warna</th>
-                                            <th>Tanggal Pembelian</th>
-                                            <th>Status</th>
+                                            <th>Alamat</th>
+                                            <th>Kelurahan</th>
+                                            <th>Kecamatan</th>
+                                            <th>Kota / Kabupaten</th>
+                                            <th>Provinsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -217,26 +205,22 @@
                                         @if ($order->product === "Lanyard")
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $order->username }}</td>
-                                            <td>{{ $order->email }}</td>
+                                            <td>
+                                              <a href="mailto:{{ $order->email }}" target="_blank">
+                                                {{ $order->username }}
+                                              </a>
+                                            </td>
                                             <td>
                                                 <a href="https://api.whatsapp.com/send?phone=+62{{ substr($order->phone_number, 1) }}" target="_blank">
                                                     {{ $order->phone_number }}
                                                 </a>
                                             </td>
                                             <td>{{ $order->product }}</td>
-                                            <td>{{ $order->size }}</td>
-                                            <td>{{ $order->color }}</td>
-                                            <td>{{ date('Y-m-d', strtotime($order->created_at)) }}</td>
-                                            <td>
-                                                @if ($order->status === 'pending')
-                                                <span class="badge badge-warning">{{ $order->status }}</span>
-                                                @elseif ($order->status === 'declined')
-                                                <span class="badge badge-danger">{{ $order->status }}</span>
-                                                @else
-                                                <span class="badge badge-success">{{ $order->status }}</span>
-                                                @endif
-                                            </td>
+                                            <td>{{ $order->address }}</td>
+                                            <td>{{ $order->kelurahan }}</td>
+                                            <td>{{ $order->kecamatan }}</td>
+                                            <td>{{ $order->kabupaten }}</td>
+                                            <td>{{ $order->provinsi }}</td>
                                         </tr>
                                         @endif
                                         @endforeach
@@ -258,13 +242,13 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Pemesan</th>
-                                            <th>Email Pemesan</th>
                                             <th>Nomor Telepon</th>
                                             <th>Pesanan</th>
-                                            <th>Size</th>
-                                            <th>Warna</th>
-                                            <th>Tanggal Pembelian</th>
-                                            <th>Status</th>
+                                            <th>Alamat</th>
+                                            <th>Kelurahan</th>
+                                            <th>Kecamatan</th>
+                                            <th>Kota / Kabupaten</th>
+                                            <th>Provinsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -272,26 +256,22 @@
                                         @if ($order->product === "Sticker")
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $order->username }}</td>
-                                            <td>{{ $order->email }}</td>
+                                            <td>
+                                              <a href="mailto:{{ $order->email }}" target="_blank">
+                                                {{ $order->username }}
+                                              </a>
+                                            </td>
                                             <td>
                                                 <a href="https://api.whatsapp.com/send?phone=+62{{ substr($order->phone_number, 1) }}" target="_blank">
                                                     {{ $order->phone_number }}
                                                 </a>
                                             </td>
                                             <td>{{ $order->product }}</td>
-                                            <td>{{ $order->size }}</td>
-                                            <td>{{ $order->color }}</td>
-                                            <td>{{ date('Y-m-d', strtotime($order->created_at)) }}</td>
-                                            <td>
-                                                @if ($order->status === 'pending')
-                                                <span class="badge badge-warning">{{ $order->status }}</span>
-                                                @elseif ($order->status === 'declined')
-                                                <span class="badge badge-danger">{{ $order->status }}</span>
-                                                @else
-                                                <span class="badge badge-success">{{ $order->status }}</span>
-                                                @endif
-                                            </td>
+                                            <td>{{ $order->address }}</td>
+                                            <td>{{ $order->kelurahan }}</td>
+                                            <td>{{ $order->kecamatan }}</td>
+                                            <td>{{ $order->kabupaten }}</td>
+                                            <td>{{ $order->provinsi }}</td>
                                         </tr>
                                         @endif
                                         @endforeach
@@ -313,13 +293,13 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Pemesan</th>
-                                            <th>Email Pemesan</th>
                                             <th>Nomor Telepon</th>
                                             <th>Pesanan</th>
-                                            <th>Size</th>
-                                            <th>Warna</th>
-                                            <th>Tanggal Pembelian</th>
-                                            <th>Status</th>
+                                            <th>Alamat</th>
+                                            <th>Kelurahan</th>
+                                            <th>Kecamatan</th>
+                                            <th>Kota / Kabupaten</th>
+                                            <th>Provinsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -327,26 +307,22 @@
                                         @if ($order->product === "T-Shirt")
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $order->username }}</td>
-                                            <td>{{ $order->email }}</td>
+                                            <td>
+                                              <a href="mailto:{{ $order->email }}" target="_blank">
+                                                {{ $order->username }}
+                                              </a>
+                                            </td>
                                             <td>
                                                 <a href="https://api.whatsapp.com/send?phone=+62{{ substr($order->phone_number, 1) }}" target="_blank">
                                                     {{ $order->phone_number }}
                                                 </a>
                                             </td>
                                             <td>{{ $order->product }}</td>
-                                            <td>{{ $order->size }}</td>
-                                            <td>{{ $order->color }}</td>
-                                            <td>{{ date('Y-m-d', strtotime($order->created_at)) }}</td>
-                                            <td>
-                                                @if ($order->status === 'pending')
-                                                <span class="badge badge-warning">{{ $order->status }}</span>
-                                                @elseif ($order->status === 'declined')
-                                                <span class="badge badge-danger">{{ $order->status }}</span>
-                                                @else
-                                                <span class="badge badge-success">{{ $order->status }}</span>
-                                                @endif
-                                            </td>
+                                            <td>{{ $order->address }}</td>
+                                            <td>{{ $order->kelurahan }}</td>
+                                            <td>{{ $order->kecamatan }}</td>
+                                            <td>{{ $order->kabupaten }}</td>
+                                            <td>{{ $order->provinsi }}</td>
                                         </tr>
                                         @endif
                                         @endforeach

@@ -15,7 +15,11 @@ class AudiensController extends Controller
      */
     public function index()
     {
-        //
+        $audiens = Audiens::all();
+
+        return view('users.audiens.index', [
+            'audiens' => $audiens
+        ]);
     }
 
     public function verify($id, $token)
