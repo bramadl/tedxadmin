@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/audiens/{id}/orders', 'AudiensController@orders');
 Route::get('/audiens/{id}/verify/{token}', 'AudiensController@verify');
 Route::delete('/audiens/{uid}/logout/{token}', 'AudiensController@logout');
 
