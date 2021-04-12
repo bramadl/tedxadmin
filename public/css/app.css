@@ -1,5 +1,5 @@
 .tx-profile-image {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   text-align: center;
   height: 300px;
   width: 300px;
@@ -15,6 +15,11 @@
 }
 
 .row-wrapper {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
+@media only screen and (max-width: 600px) {
+  .tx-profile-image {
+    margin-left: 2rem; 
+  }
+}
