@@ -44,6 +44,9 @@
                                 <div class="col-6 text-right">
                                     <button class="btn btn-link px-0" type="button">Forgot password?</button>
                                 </div>
+                                <div class="col-6 mt-4">
+                                    <button class="btn btn-primary px-4 d-md-none" type="button">Register</button>
+                                </div>
                             </div>
                         </div>
                     </div>
