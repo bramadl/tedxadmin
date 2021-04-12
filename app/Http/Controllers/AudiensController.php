@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Audiens;
+use App\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -19,6 +20,20 @@ class AudiensController extends Controller
 
         return view('users.audiens.index', [
             'audiens' => $audiens
+        ]);
+    }
+
+    public function orders($id)
+    {
+        $merchandises = DB::table('payments')
+            ->join('audiens', 'audiens.id', 'payments.user_id')
+            ->join('orders', 'orders.id', 'payments.order_id')
+            ->where('audiens.id', $id)
+            ->get();
+
+        return response()->json([
+            'success' => true,
+            'merchandises' => $merchandises
         ]);
     }
 
