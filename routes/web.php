@@ -21,7 +21,7 @@ Route::view('/', 'home');
 Route::view('tickets/pembayaran','products.tickets.pembayaran.index');
 Route::view('tickets/pembelian','products.tickets.pembelian.index');
 
-Route::view('users/audiens', 'users.audiens.index');
+// Route::view('users/audiens', 'users.audiens.index');
 Route::view('users/volunteers', 'users.volunteers.index');
 Route::view('users/cores', 'users.cores.index');
 
@@ -37,4 +37,6 @@ Route::resources([
   'merchandise/pembelian' => 'OrdersController',
   'merchandise/pembayaran' => 'PaymentsController',
   'merchandise/pengiriman' => 'DeliveryController',
+
+  'users/audiens' => 'AudiensController'
 ]);
