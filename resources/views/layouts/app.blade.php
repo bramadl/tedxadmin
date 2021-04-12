@@ -53,6 +53,15 @@
     })
   </script>
 
+  @if (session('success'))
+  <script>
+    Toast.fire({
+      icon: 'success',
+      title: @json(session('success'))
+    })
+  </script>
+  @endif
+
   <!-- CoreUI and necessary plugins-->
   <script src="{{ asset('vendors/@coreui/coreui/dist/js/coreui.bundle.min.js') }}"></script>
   <script src="{{ asset('vendors/@coreui/icons/js/svgxuse.min.js') }}"></script>

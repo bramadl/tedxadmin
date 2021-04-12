@@ -8,56 +8,108 @@
     </svg>
   </div>
   <ul class="c-sidebar-nav">
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ url('/') }}">
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{ url('/') }}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-speedometer') }}"></use>
-        </svg> Dashboard</a></li>
+        </svg> Dashboard
+      </a>
+    </li>
+
     <li class="c-sidebar-nav-title">Kelola Produk</li>
-    <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+    <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+      <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-cash') }}"></use>
-        </svg> Merchandise</a>
+        </svg> Merchandise
+      </a>
       <ul class="c-sidebar-nav-dropdown-items">
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('merchandise/pembelian')}}"><span class="c-sidebar-nav-icon"></span> Pembelian</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('merchandise/pembayaran')}}"><span class="c-sidebar-nav-icon"></span> Pembayaran</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('merchandise/pengiriman')}}"><span class="c-sidebar-nav-icon"></span> Pengiriman</a></li>
+        <li class="c-sidebar-nav-item">
+          <a class="c-sidebar-nav-link" href="{{url('merchandise/pembelian')}}">
+            <span class="c-sidebar-nav-icon"></span>
+            Pembelian
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
+          <a class="c-sidebar-nav-link" href="{{url('merchandise/pembayaran')}}">
+            <span class="c-sidebar-nav-icon"></span>
+            Pembayaran
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
+          <a class="c-sidebar-nav-link" href="{{url('merchandise/pengiriman')}}">
+            <span class="c-sidebar-nav-icon"></span>
+            Pengiriman
+          </a>
+        </li>
       </ul>
     </li>
-    <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+    <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+      <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-tags') }}"></use>
         </svg> Tickets</a>
       <ul class="c-sidebar-nav-dropdown-items">
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('tickets/pembelian')}}"><span class="c-sidebar-nav-icon"></span> Pembelian</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('tickets/pembayaran')}}"><span class="c-sidebar-nav-icon"></span> Pembayaran</a></li>
+        <li class="c-sidebar-nav-item">
+          <a class="c-sidebar-nav-link" href="{{url('tickets/pembelian')}}">
+            <span class="c-sidebar-nav-icon"></span>
+            Pembelian
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
+          <a class="c-sidebar-nav-link" href="{{url('tickets/pembayaran')}}">
+            <span class="c-sidebar-nav-icon"></span>
+            Pembayaran
+          </a>
+        </li>
       </ul>
     </li>
     <li class="c-sidebar-nav-title">Kelola Pengguna</li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('users/audiens')}}">
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{url('users/audiens')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-people') }}"></use>
-        </svg> Audiens</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('users/volunteers')}}">
+        </svg> Audiens
+      </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{url('users/volunteers')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-group') }}"></use>
-        </svg> Volunteers</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('users/cores')}}">
+        </svg> Volunteers
+      </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{url('users/cores')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-group') }}"></use>
-        </svg> Cores</a></li>
+        </svg> Cores
+      </a>
+    </li>
+
     <li class="c-sidebar-nav-title">Kelola Akun</li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('account/profile')}}">
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{url('account/profile')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-user') }}"></use>
-        </svg> Profile</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('account/settings')}}">
+        </svg> Profile
+      </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{url('account/settings')}}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-cog') }}"></use>
-        </svg> Settings</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('auth/login')}}">
+        </svg> Settings
+      </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logoutForm').submit()">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-power-standby') }}"></use>
-        </svg> Logout</a></li>
+        </svg> Logout
+      </a>
+    </li>
+    <form id="logoutForm" action="{{ action('Auth\LogoutController@logout') }}" class="d-none" method="POST">@csrf</form>
   </ul>
   <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
 </div>

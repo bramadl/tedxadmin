@@ -13,30 +13,40 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'home');
-// Route::view('merch/pembelian','products.merchandise.pembelian.index');
-// Route::view('merch/pembayaran','products.merchandise.pembayaran.index');
+Route::group([
+  'middleware' => 'cores'
+], function () {
+  Route::view('/', 'home')->name('dashboard');
+  
+  Route::view('tickets/pembayaran','products.tickets.pembayaran.index');
+  Route::view('tickets/pembelian','products.tickets.pembelian.index');
+  
+  Route::view('users/volunteers', 'users.volunteers.index');
+  Route::view('users/cores', 'users.cores.index');
+  
+  Route::view('account/profile', 'account.profile.index');
+  Route::view('account/settings', 'account.settings.index');
+  
+  Route::post('/merchandise/pembayaran/{id}/confirm', 'PaymentsController@confirm');
+  Route::post('/merchandise/pembayaran/{id}/decline', 'PaymentsController@decline');
+  
+  Route::resources([
+    'merchandise/pembelian' => 'OrdersController',
+    'merchandise/pembayaran' => 'PaymentsController',
+    'merchandise/pengiriman' => 'DeliveryController',
+  
+    'users/audiens' => 'AudiensController'
+  ]);
+});
 
+Route::group([
+  'middleware' => 'guest:cores'
+], function () {
+  Route::get('auth/login', 'Auth\LoginController@index')->name('login');
+  Route::post('auth/login', 'Auth\LoginController@login');
 
-Route::view('tickets/pembayaran','products.tickets.pembayaran.index');
-Route::view('tickets/pembelian','products.tickets.pembelian.index');
+  Route::get('auth/register', 'Auth\RegisterController@index')->name('register');
+  Route::post('auth/register', 'Auth\RegisterController@register');
+});
 
-// Route::view('users/audiens', 'users.audiens.index');
-Route::view('users/volunteers', 'users.volunteers.index');
-Route::view('users/cores', 'users.cores.index');
-
-Route::view('account/profile', 'account.profile.index');
-Route::view('account/settings', 'account.settings.index');
-
-Route::view('auth/login', 'auth.login');
-Route::view('auth/register', 'auth.register');
-
-Route::post('/merchandise/pembayaran/{id}/confirm', 'PaymentsController@confirm');
-Route::post('/merchandise/pembayaran/{id}/decline', 'PaymentsController@decline');
-Route::resources([
-  'merchandise/pembelian' => 'OrdersController',
-  'merchandise/pembayaran' => 'PaymentsController',
-  'merchandise/pengiriman' => 'DeliveryController',
-
-  'users/audiens' => 'AudiensController'
-]);
+Route::post('auth/logout', 'Auth\LogoutController@logout')->name('logout');

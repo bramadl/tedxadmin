@@ -466,7 +466,7 @@
                     <tbody>
                         <tr>
                             <td class="text-center">
-                                <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/1.jpg" alt="user@email.com"><span class="c-avatar-status bg-success"></span></div>
+                                <div class="c-avatar"><img class="c-avatar-img" src="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" style="width: 2rem; height: 2rem; object-fit: cover;" alt="user@email.com"><span class="c-avatar-status bg-success"></span></div>
                             </td>
                             <td>
                                 <div>Yiorgos Avraamu</div>
@@ -497,7 +497,7 @@
                         </tr>
                         <tr>
                             <td class="text-center">
-                                <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/2.jpg" alt="user@email.com"><span class="c-avatar-status bg-danger"></span></div>
+                                <div class="c-avatar"><img class="c-avatar-img" src="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" style="width: 2rem; height: 2rem; object-fit: cover;" alt="user@email.com"><span class="c-avatar-status bg-danger"></span></div>
                             </td>
                             <td>
                                 <div>Avram Tarasios</div>
@@ -528,7 +528,7 @@
                         </tr>
                         <tr>
                             <td class="text-center">
-                                <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/3.jpg" alt="user@email.com"><span class="c-avatar-status bg-warning"></span></div>
+                                <div class="c-avatar"><img class="c-avatar-img" src="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" style="width: 2rem; height: 2rem; object-fit: cover;" alt="user@email.com"><span class="c-avatar-status bg-warning"></span></div>
                             </td>
                             <td>
                                 <div>Quintin Ed</div>
@@ -559,7 +559,7 @@
                         </tr>
                         <tr>
                             <td class="text-center">
-                                <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/4.jpg" alt="user@email.com"><span class="c-avatar-status bg-secondary"></span></div>
+                                <div class="c-avatar"><img class="c-avatar-img" src="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" style="width: 2rem; height: 2rem; object-fit: cover;" alt="user@email.com"><span class="c-avatar-status bg-secondary"></span></div>
                             </td>
                             <td>
                                 <div>Enéas Kwadwo</div>
@@ -590,7 +590,7 @@
                         </tr>
                         <tr>
                             <td class="text-center">
-                                <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/5.jpg" alt="user@email.com"><span class="c-avatar-status bg-success"></span></div>
+                                <div class="c-avatar"><img class="c-avatar-img" src="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" style="width: 2rem; height: 2rem; object-fit: cover;" alt="user@email.com"><span class="c-avatar-status bg-success"></span></div>
                             </td>
                             <td>
                                 <div>Agapetus Tadeáš</div>
@@ -621,7 +621,7 @@
                         </tr>
                         <tr>
                             <td class="text-center">
-                                <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/6.jpg" alt="user@email.com"><span class="c-avatar-status bg-danger"></span></div>
+                                <div class="c-avatar"><img class="c-avatar-img" src="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" style="width: 2rem; height: 2rem; object-fit: cover;" alt="user@email.com"><span class="c-avatar-status bg-danger"></span></div>
                             </td>
                             <td>
                                 <div>Friderik Dávid</div>
