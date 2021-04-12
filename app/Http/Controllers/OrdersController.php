@@ -5,9 +5,21 @@ namespace App\Http\Controllers;
 use App\Audiens;
 use App\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OrdersController extends Controller
 {
+    public function index()
+    {
+        $orders = DB::table('orders')
+                        ->join('payments', 'orders.id', 'payments.order_id')
+                        ->get();
+
+        return view('products.merchandise.pembelian.index', [
+            'orders' => $orders
+        ]);
+    }
+    
     public function store(Request $request)
     {
         // Validasi Request

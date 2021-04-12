@@ -18,8 +18,9 @@
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-cash') }}"></use>
         </svg> Merchandise</a>
       <ul class="c-sidebar-nav-dropdown-items">
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('merch/pembelian')}}"><span class="c-sidebar-nav-icon"></span> Pembelian</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('merch/pembayaran')}}"><span class="c-sidebar-nav-icon"></span> Pembayaran</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('merchandise/pembelian')}}"><span class="c-sidebar-nav-icon"></span> Pembelian</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('merchandise/pembayaran')}}"><span class="c-sidebar-nav-icon"></span> Pembayaran</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('merchandise/pengiriman')}}"><span class="c-sidebar-nav-icon"></span> Pengiriman</a></li>
       </ul>
     </li>
     <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
