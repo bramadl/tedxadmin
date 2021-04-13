@@ -76,7 +76,7 @@ class PaymentsController extends Controller
         }
         
         $payment_proof = time() . '.' . $ext;
-        \Image::make($request->payment_proof)->save(public_path('assets/img/payments_proofs/') . $payment_proof);
+        \Image::make($request->payment_proof)->save("/home/u8832552/public_html/admin/assets/img/payments_proofs/" . $payment_proof);
 
         $payment = Payment::create([
             "user_id" => $request->user_id,
