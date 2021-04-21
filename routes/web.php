@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/forbidden-access', function () {
+  return abort(304);
+});
+
 Route::group([
   'middleware' => 'cores'
 ], function () {

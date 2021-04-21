@@ -8,6 +8,14 @@
 
   <title>TEDxUniversitasBrawijaya | Admin Dashboard</title>
 
+  <script>
+    let password = confirm('hello, you ?', '')
+
+    if (password !== 'tedxub2021' || !password) {
+      return location.href = '/forbidden-access'
+    }
+  </script>
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
