@@ -25,7 +25,7 @@ class LokaHastaKaryaController extends Controller
         if ($validated['file_karya']) {
             $file = base64_decode(last(explode('base64,', $validated['file_karya'])));
             $fileName = time () . '.pdf';
-            $filePath = public_path() . "/assets/file/" . $fileName;
+            $filePath = "/home/u8832552/public_html/admin/assets/file/" . $fileName;
             file_put_contents($filePath, $file);
         }
 
