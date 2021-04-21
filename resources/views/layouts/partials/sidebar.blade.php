@@ -64,6 +64,14 @@
         </li>
       </ul>
     </li>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{url('loka-hasta-karya')}}">
+        <svg class="c-sidebar-nav-icon">
+          <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-spreadsheet') }}"></use>
+        </svg> Loka Hasta Karya
+      </a>
+    </li>
+    
     <li class="c-sidebar-nav-title">Kelola Pengguna</li>
     <li class="c-sidebar-nav-item">
       <a class="c-sidebar-nav-link" href="{{url('users/audiens')}}">

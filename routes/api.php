@@ -22,6 +22,8 @@ Route::get('/audiens/{id}/orders', 'AudiensController@orders');
 Route::get('/audiens/{id}/verify/{token}', 'AudiensController@verify');
 Route::delete('/audiens/{uid}/logout/{token}', 'AudiensController@logout');
 
+Route::post('/loka-hasta-karya', 'LokaHastaKaryaController@store');
+
 Route::get('/orders/{id}/{username}', 'OrdersController@show');
 Route::post('/orders', 'OrdersController@store');
 

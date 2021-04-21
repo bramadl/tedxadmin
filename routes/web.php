@@ -29,11 +29,16 @@ Route::group([
   
   Route::post('/merchandise/pembayaran/{id}/confirm', 'PaymentsController@confirm');
   Route::post('/merchandise/pembayaran/{id}/decline', 'PaymentsController@decline');
+
+  Route::post('/loka-hasta-karya/{id}/confirm', 'LokaHastaKaryaController@confirm');
+  Route::post('/loka-hasta-karya/{id}/decline', 'LokaHastaKaryaController@decline');
   
   Route::resources([
     'merchandise/pembelian' => 'OrdersController',
     'merchandise/pembayaran' => 'PaymentsController',
     'merchandise/pengiriman' => 'DeliveryController',
+
+    'loka-hasta-karya' => 'LokaHastaKaryaController',
   
     'users/audiens' => 'AudiensController'
   ]);
