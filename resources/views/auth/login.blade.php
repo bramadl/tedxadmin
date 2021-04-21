@@ -10,6 +10,8 @@
 
     <title>Login Admin TEDxUniversitasBrawijaya</title>
 
+    @include('security.check')
+
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
 
 </head>
