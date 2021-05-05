@@ -44,7 +44,7 @@
                               @foreach ($files as $key => $file)
                               <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td>{{ $file->nama_lengkap }}</td>
+                                <td><a href="mailto:{{ $file->email }}">{{ $file->nama_lengkap }}</a></td>
                                 <td>
                                   <a href="https://api.whatsapp.com/send?phone=62{{ substr($file->nomor_wa, 1) }}">
                                     {{ $file->nomor_wa }}
