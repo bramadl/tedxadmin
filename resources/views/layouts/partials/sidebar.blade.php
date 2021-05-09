@@ -51,15 +51,15 @@
         </svg> Tickets</a>
       <ul class="c-sidebar-nav-dropdown-items">
         <li class="c-sidebar-nav-item">
-          <a class="c-sidebar-nav-link" href="{{url('tickets/pembelian')}}">
-            <span class="c-sidebar-nav-icon"></span>
-            Pembelian
-          </a>
-        </li>
-        <li class="c-sidebar-nav-item">
           <a class="c-sidebar-nav-link" href="{{url('tickets/pembayaran')}}">
             <span class="c-sidebar-nav-icon"></span>
             Pembayaran
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
+          <a class="c-sidebar-nav-link" href="{{url('tickets/pembelian')}}">
+            <span class="c-sidebar-nav-icon"></span>
+            Pembelian
           </a>
         </li>
       </ul>
