@@ -29,6 +29,7 @@ Route::group([
   Route::post('/merchandise/pembayaran/{id}/decline', 'PaymentsController@decline');
   
   Route::post('/tickets/pembayaran/{id}/verify', 'TicketPaymentController@verify');
+  Route::post('/tickets/permintaan-token/{id}/verify', 'RefreshTokenController@verify');
 
   Route::post('/loka-hasta-karya/{id}/confirm', 'LokaHastaKaryaController@confirm');
   Route::post('/loka-hasta-karya/{id}/decline', 'LokaHastaKaryaController@decline');
@@ -40,12 +41,16 @@ Route::group([
 
     'tickets/pembayaran' => 'TicketPaymentController',
     'tickets/pembelian' => 'TicketInvoiceController',
+    'tickets/permintaan-token' => 'RefreshTokenController',
 
     'loka-hasta-karya' => 'LokaHastaKaryaController',
   
     'users/audiens' => 'AudiensController',
-    'users/volunteers' => 'VolunteersController',
-    'users/cores' => 'CoresController',
+    'users/volunteers' => 'VolunteerController',
+    'users/cores' => 'CoreController',
+    'users/speakers' => 'SpeakerController',
+    'users/talents' => 'TalentController',
+    'users/partners' => 'PartnerController',
   ]);
 });
 

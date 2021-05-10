@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Audiens;
-use App\Order;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 
-class AudiensController extends Controller
+class CoreController extends Controller
 {
     private $url;
 
@@ -24,10 +21,10 @@ class AudiensController extends Controller
      */
     public function index()
     {
-        $response = Http::get($this->url . '/api/audiens');
+        $response = Http::get($this->url . '/api/cores');
 
-        return view('users.audiens.index', [
-            'audiens' => $response['audiens']
+        return view('users.cores.index', [
+            'cores' => $response['cores']
         ]);
     }
 }

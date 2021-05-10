@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\InvoiceMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class TicketPaymentController extends Controller
 {
@@ -22,7 +24,7 @@ class TicketPaymentController extends Controller
     public function index()
     {
         $payments = Http::get($this->url . '/api/payments');
-        return view('products.tickets.pembelian.index', [
+        return view('products.tickets.pembayaran.index', [
             'payments' => $payments['payments'],
             'url' => $this->url
         ]);
@@ -38,6 +40,12 @@ class TicketPaymentController extends Controller
                     ->back()
                     ->with('error', 'Terjadi kesalahan, mohon coba lagi nanti');
         }
+
+        $user = $response['user'];
+        $payment = $response['payment'];
+        $ticket = $response['ticket'];
+
+        Mail::to($user['email_address'])->send(new InvoiceMail($user, $payment, $ticket));
         
         return redirect('tickets/pembayaran')
                 ->with('success', 'Pembayaran berhasil ' . ($status === 'confirmed' ? 'dikonfirmasi.' : 'ditolak.'));

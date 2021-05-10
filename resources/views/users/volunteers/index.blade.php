@@ -4,8 +4,8 @@
 <!-- Breadcrumb-->
 <ol class="breadcrumb border-0 m-0">
     <li class="breadcrumb-item">Home</li>
-    <li class="breadcrumb-item">Merchandise</li>
-    <li class="breadcrumb-item active">Pembelian</li>
+    <li class="breadcrumb-item">Pengguna</li>
+    <li class="breadcrumb-item active">Volunteers</li>
 </ol>
 <!-- Breadcrumb Menu-->
 @endsection
@@ -15,7 +15,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <i class="fa fa-align-justify"></i> Table Pembelian
+                <i class="fa fa-align-justify"></i> Table Volunteers
             </div>
             <div class="card-body">
                 <div class="row">
@@ -32,7 +32,7 @@
                             <li class="nav-item"><a class="nav-link" id="pills-sponsor-tab" data-toggle="pill" href="#pills-sponsor" role="tab" aria-controls="pills-sponsor" aria-selected="false">SP</a></li>
 
                             <li class="nav-item"><a class="nav-link" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">VP</a></li>
-                            
+
                             <li class="nav-item"><a class="nav-link" id="pills-desain-tab" data-toggle="pill" href="#pills-desain" role="tab" aria-controls="pills-desain" aria-selected="false">D</a></li>
 
                             <li class="nav-item"><a class="nav-link" id="pills-cem-tab" data-toggle="pill" href="#pills-cem" role="tab" aria-controls="pills-cem" aria-selected="false">CEM</a></li>
@@ -45,20 +45,30 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
+                                            <th>Full Name</th>
+                                            <th>Email Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Street Address</th>
                                             <th>Role</th>
+                                            <th>Division</th>
+                                            <th>Verified</th>
+                                            <th>Joined At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @for ($i = 0; $i < 5; $i++)
+                                        @foreach ($volunteers as $key => $volunteer)
                                         <tr>
-                                            <td>{{$i + 1}}</td>
-                                            <td>Samppa Nori</td>
-                                            <td>blabla@me.com</td>
-                                            <td>All</td>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $volunteer['first_name'] }} {{ $volunteer['last_name'] }}</td>
+                                            <td>{{ $volunteer['email_address'] }}</td>
+                                            <td>{{ $volunteer['phone_number'] ? $volunteer['phone_number'] : '-' }}</td>
+                                            <td>{{ $volunteer['street_address'] ? $volunteer['street_address'] : '-' }}</td>
+                                            <td>{{ $volunteer['role'] }}</td>
+                                            <td>{{ $volunteer['division'] }}</td>
+                                            <td>{{ $volunteer['verified'] ? 'Confirmed' : 'Not Confirmed' }}</td>
+                                            <td>{{ date('d M, Y', strtotime($volunteer['created_at'])) }}</td>
                                         </tr>
-                                        @endfor
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <ul class="pagination">
@@ -76,20 +86,32 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
+                                            <th>Full Name</th>
+                                            <th>Email Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Street Address</th>
                                             <th>Role</th>
+                                            <th>Division</th>
+                                            <th>Verified</th>
+                                            <th>Joined At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @for ($i = 0; $i < 5; $i++)
+                                        @foreach ($volunteers as $key => $volunteer)
+                                        @if ($volunteer['division'] === 'Website')
                                         <tr>
-                                            <td>{{$i + 1}}</td>
-                                            <td>Samppa Nokia</td>
-                                            <td>siapakek@me.com</td>
-                                            <td>Web Manager</td>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $volunteer['first_name'] }} {{ $volunteer['last_name'] }}</td>
+                                            <td>{{ $volunteer['email_address'] }}</td>
+                                            <td>{{ $volunteer['phone_number'] ? $volunteer['phone_number'] : '-' }}</td>
+                                            <td>{{ $volunteer['street_address'] ? $volunteer['street_address'] : '-' }}</td>
+                                            <td>{{ $volunteer['role'] }}</td>
+                                            <td>{{ $volunteer['division'] }}</td>
+                                            <td>{{ $volunteer['verified'] ? 'Confirmed' : 'Not Confirmed' }}</td>
+                                            <td>{{ date('d M, Y', strtotime($volunteer['created_at'])) }}</td>
                                         </tr>
-                                        @endfor
+                                        @endif
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <ul class="pagination">
@@ -107,20 +129,32 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
+                                            <th>Full Name</th>
+                                            <th>Email Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Street Address</th>
                                             <th>Role</th>
+                                            <th>Division</th>
+                                            <th>Verified</th>
+                                            <th>Joined At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @for ($i = 0; $i < 5; $i++)
+                                        @foreach ($volunteers as $key => $volunteer)
+                                        @if ($volunteer['division'] === 'Event Manager')
                                         <tr>
-                                            <td>{{$i + 1}}</td>
-                                            <td>anak EM</td>
-                                            <td>em@me.com</td>
-                                            <td>Event Manager</td>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $volunteer['first_name'] }} {{ $volunteer['last_name'] }}</td>
+                                            <td>{{ $volunteer['email_address'] }}</td>
+                                            <td>{{ $volunteer['phone_number'] ? $volunteer['phone_number'] : '-' }}</td>
+                                            <td>{{ $volunteer['street_address'] ? $volunteer['street_address'] : '-' }}</td>
+                                            <td>{{ $volunteer['role'] }}</td>
+                                            <td>{{ $volunteer['division'] }}</td>
+                                            <td>{{ $volunteer['verified'] ? 'Confirmed' : 'Not Confirmed' }}</td>
+                                            <td>{{ date('d M, Y', strtotime($volunteer['created_at'])) }}</td>
                                         </tr>
-                                        @endfor
+                                        @endif
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <ul class="pagination">
@@ -138,21 +172,32 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
-                                            <th>Role<th>
+                                            <th>Full Name</th>
+                                            <th>Email Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Street Address</th>
+                                            <th>Role</th>
+                                            <th>Division</th>
+                                            <th>Verified</th>
+                                            <th>Joined At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @for ($i = 0; $i < 5; $i++)
+                                        @foreach ($volunteers as $key => $volunteer)
+                                        @if ($volunteer['division'] === 'Executive Producer')
                                         <tr>
-                                            <td>{{$i + 1}}</td>
-                                            <td>anak EP</td>
-                                            <td>ep@me.com</td>
-                                            <td>Executive Producer</td>
-                                            <td><span class="badge badge-danger">Pending</span></td>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $volunteer['first_name'] }} {{ $volunteer['last_name'] }}</td>
+                                            <td>{{ $volunteer['email_address'] }}</td>
+                                            <td>{{ $volunteer['phone_number'] ? $volunteer['phone_number'] : '-' }}</td>
+                                            <td>{{ $volunteer['street_address'] ? $volunteer['street_address'] : '-' }}</td>
+                                            <td>{{ $volunteer['role'] }}</td>
+                                            <td>{{ $volunteer['division'] }}</td>
+                                            <td>{{ $volunteer['verified'] ? 'Confirmed' : 'Not Confirmed' }}</td>
+                                            <td>{{ date('d M, Y', strtotime($volunteer['created_at'])) }}</td>
                                         </tr>
-                                        @endfor
+                                        @endif
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <ul class="pagination">
@@ -170,20 +215,32 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
+                                            <th>Full Name</th>
+                                            <th>Email Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Street Address</th>
                                             <th>Role</th>
+                                            <th>Division</th>
+                                            <th>Verified</th>
+                                            <th>Joined At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @for ($i = 0; $i < 5; $i++)
+                                        @foreach ($volunteers as $key => $volunteer)
+                                        @if ($volunteer['division'] === 'Sponsorship')
                                         <tr>
-                                            <td>{{$i + 1}}</td>
-                                            <td>Anak Sponsor</td>
-                                            <td>sponsor@me.com</td>
-                                            <td>Sponsorship</td>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $volunteer['first_name'] }} {{ $volunteer['last_name'] }}</td>
+                                            <td>{{ $volunteer['email_address'] }}</td>
+                                            <td>{{ $volunteer['phone_number'] ? $volunteer['phone_number'] : '-' }}</td>
+                                            <td>{{ $volunteer['street_address'] ? $volunteer['street_address'] : '-' }}</td>
+                                            <td>{{ $volunteer['role'] }}</td>
+                                            <td>{{ $volunteer['division'] }}</td>
+                                            <td>{{ $volunteer['verified'] ? 'Confirmed' : 'Not Confirmed' }}</td>
+                                            <td>{{ date('d M, Y', strtotime($volunteer['created_at'])) }}</td>
                                         </tr>
-                                        @endfor
+                                        @endif
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <ul class="pagination">
@@ -200,21 +257,33 @@
                                 <table class="table table-responsive-sm">
                                     <thead>
                                         <tr>
-                                            <th>No.</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
+                                            <th>No</th>
+                                            <th>Full Name</th>
+                                            <th>Email Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Street Address</th>
                                             <th>Role</th>
+                                            <th>Division</th>
+                                            <th>Verified</th>
+                                            <th>Joined At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @for ($i = 0; $i < 5; $i++)
+                                        @foreach ($volunteers as $key => $volunteer)
+                                        @if ($volunteer['division'] === 'Video Production')
                                         <tr>
-                                            <td>{{$i + 1}}</td>
-                                            <td>Anak VP</td>
-                                            <td>vp@me.com</td>
-                                            <td>Video Production</td>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $volunteer['first_name'] }} {{ $volunteer['last_name'] }}</td>
+                                            <td>{{ $volunteer['email_address'] }}</td>
+                                            <td>{{ $volunteer['phone_number'] ? $volunteer['phone_number'] : '-' }}</td>
+                                            <td>{{ $volunteer['street_address'] ? $volunteer['street_address'] : '-' }}</td>
+                                            <td>{{ $volunteer['role'] }}</td>
+                                            <td>{{ $volunteer['division'] }}</td>
+                                            <td>{{ $volunteer['verified'] ? 'Confirmed' : 'Not Confirmed' }}</td>
+                                            <td>{{ date('d M, Y', strtotime($volunteer['created_at'])) }}</td>
                                         </tr>
-                                        @endfor
+                                        @endif
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <ul class="pagination">
@@ -230,21 +299,33 @@
                                 <table class="table table-responsive-sm">
                                     <thead>
                                         <tr>
-                                            <th>No.</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
+                                            <th>No</th>
+                                            <th>Full Name</th>
+                                            <th>Email Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Street Address</th>
                                             <th>Role</th>
+                                            <th>Division</th>
+                                            <th>Verified</th>
+                                            <th>Joined At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @for ($i = 0; $i < 5; $i++)
+                                        @foreach ($volunteers as $key => $volunteer)
+                                        @if ($volunteer['division'] === 'Design')
                                         <tr>
-                                            <td>{{$i + 1}}</td>
-                                            <td>Anak Desain</td>
-                                            <td>desain@me.com/td>
-                                            <td>Desain</td>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $volunteer['first_name'] }} {{ $volunteer['last_name'] }}</td>
+                                            <td>{{ $volunteer['email_address'] }}</td>
+                                            <td>{{ $volunteer['phone_number'] ? $volunteer['phone_number'] : '-' }}</td>
+                                            <td>{{ $volunteer['street_address'] ? $volunteer['street_address'] : '-' }}</td>
+                                            <td>{{ $volunteer['role'] }}</td>
+                                            <td>{{ $volunteer['division'] }}</td>
+                                            <td>{{ $volunteer['verified'] ? 'Confirmed' : 'Not Confirmed' }}</td>
+                                            <td>{{ date('d M, Y', strtotime($volunteer['created_at'])) }}</td>
                                         </tr>
-                                        @endfor
+                                        @endif
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <ul class="pagination">
@@ -260,21 +341,33 @@
                                 <table class="table table-responsive-sm">
                                     <thead>
                                         <tr>
-                                            <th>No.</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
+                                            <th>No</th>
+                                            <th>Full Name</th>
+                                            <th>Email Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Street Address</th>
                                             <th>Role</th>
+                                            <th>Division</th>
+                                            <th>Verified</th>
+                                            <th>Joined At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @for ($i = 0; $i < 5; $i++)
+                                        @foreach ($volunteers as $key => $volunteer)
+                                        @if ($volunteer['division'] === 'CEM')
                                         <tr>
-                                            <td>{{$i + 1}}</td>
-                                            <td>Anak CEM</td>
-                                            <td>cem@gmail.com</td>
-                                            <td>Content, Editorial, and Marketing</td>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $volunteer['first_name'] }} {{ $volunteer['last_name'] }}</td>
+                                            <td>{{ $volunteer['email_address'] }}</td>
+                                            <td>{{ $volunteer['phone_number'] ? $volunteer['phone_number'] : '-' }}</td>
+                                            <td>{{ $volunteer['street_address'] ? $volunteer['street_address'] : '-' }}</td>
+                                            <td>{{ $volunteer['role'] }}</td>
+                                            <td>{{ $volunteer['division'] }}</td>
+                                            <td>{{ $volunteer['verified'] ? 'Confirmed' : 'Not Confirmed' }}</td>
+                                            <td>{{ date('d M, Y', strtotime($volunteer['created_at'])) }}</td>
                                         </tr>
-                                        @endfor
+                                        @endif
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <ul class="pagination">
@@ -290,21 +383,33 @@
                                 <table class="table table-responsive-sm">
                                     <thead>
                                         <tr>
-                                            <th>No.</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
-                                            <th>Role/th>
+                                            <th>No</th>
+                                            <th>Full Name</th>
+                                            <th>Email Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Street Address</th>
+                                            <th>Role</th>
+                                            <th>Division</th>
+                                            <th>Verified</th>
+                                            <th>Joined At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @for ($i = 0; $i < 5; $i++)
+                                        @foreach ($volunteers as $key => $volunteer)
+                                        @if ($volunteer['division'] === 'Curator')
                                         <tr>
-                                            <td>{{$i + 1}}</td>
-                                            <td>Anak Currator</td>
-                                            <td>cur@me.com</td>
-                                            <td>Currator</td>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $volunteer['first_name'] }} {{ $volunteer['last_name'] }}</td>
+                                            <td>{{ $volunteer['email_address'] }}</td>
+                                            <td>{{ $volunteer['phone_number'] ? $volunteer['phone_number'] : '-' }}</td>
+                                            <td>{{ $volunteer['street_address'] ? $volunteer['street_address'] : '-' }}</td>
+                                            <td>{{ $volunteer['role'] }}</td>
+                                            <td>{{ $volunteer['division'] }}</td>
+                                            <td>{{ $volunteer['verified'] ? 'Confirmed' : 'Not Confirmed' }}</td>
+                                            <td>{{ date('d M, Y', strtotime($volunteer['created_at'])) }}</td>
                                         </tr>
-                                        @endfor
+                                        @endif
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <ul class="pagination">
