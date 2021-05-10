@@ -51,15 +51,21 @@
         </svg> Tickets</a>
       <ul class="c-sidebar-nav-dropdown-items">
         <li class="c-sidebar-nav-item">
+          <a class="c-sidebar-nav-link" href="{{url('tickets/pembayaran')}}">
+            <span class="c-sidebar-nav-icon"></span>
+            Pembayaran
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
           <a class="c-sidebar-nav-link" href="{{url('tickets/pembelian')}}">
             <span class="c-sidebar-nav-icon"></span>
             Pembelian
           </a>
         </li>
         <li class="c-sidebar-nav-item">
-          <a class="c-sidebar-nav-link" href="{{url('tickets/pembayaran')}}">
+          <a class="c-sidebar-nav-link" href="{{url('tickets/permintaan-token')}}">
             <span class="c-sidebar-nav-icon"></span>
-            Pembayaran
+            Permintaan Token
           </a>
         </li>
       </ul>
@@ -92,6 +98,27 @@
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-group') }}"></use>
         </svg> Cores
+      </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{url('users/speakers')}}">
+        <svg class="c-sidebar-nav-icon">
+          <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-group') }}"></use>
+        </svg> Speakers
+      </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{url('users/talents')}}">
+        <svg class="c-sidebar-nav-icon">
+          <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-group') }}"></use>
+        </svg> Talents
+      </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{url('users/partners')}}">
+        <svg class="c-sidebar-nav-icon">
+          <use xlink:href="{{ asset('vendors/@coreui/icons/sprites/free.svg#cil-group') }}"></use>
+        </svg> Partners
       </a>
     </li>
 

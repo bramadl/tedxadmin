@@ -21,18 +21,15 @@ Route::group([
   'middleware' => 'cores'
 ], function () {
   Route::view('/', 'home')->name('dashboard');
-  
-  Route::view('tickets/pembayaran','products.tickets.pembayaran.index');
-  Route::view('tickets/pembelian','products.tickets.pembelian.index');
-  
-  Route::view('users/volunteers', 'users.volunteers.index');
-  Route::view('users/cores', 'users.cores.index');
-  
+
   Route::view('account/profile', 'account.profile.index');
   Route::view('account/settings', 'account.settings.index');
   
   Route::post('/merchandise/pembayaran/{id}/confirm', 'PaymentsController@confirm');
   Route::post('/merchandise/pembayaran/{id}/decline', 'PaymentsController@decline');
+  
+  Route::post('/tickets/pembayaran/{id}/verify', 'TicketPaymentController@verify');
+  Route::post('/tickets/permintaan-token/{id}/verify', 'RefreshTokenController@verify');
 
   Route::post('/loka-hasta-karya/{id}/confirm', 'LokaHastaKaryaController@confirm');
   Route::post('/loka-hasta-karya/{id}/decline', 'LokaHastaKaryaController@decline');
@@ -42,9 +39,18 @@ Route::group([
     'merchandise/pembayaran' => 'PaymentsController',
     'merchandise/pengiriman' => 'DeliveryController',
 
+    'tickets/pembayaran' => 'TicketPaymentController',
+    'tickets/pembelian' => 'TicketInvoiceController',
+    'tickets/permintaan-token' => 'RefreshTokenController',
+
     'loka-hasta-karya' => 'LokaHastaKaryaController',
   
-    'users/audiens' => 'AudiensController'
+    'users/audiens' => 'AudiensController',
+    'users/volunteers' => 'VolunteerController',
+    'users/cores' => 'CoreController',
+    'users/speakers' => 'SpeakerController',
+    'users/talents' => 'TalentController',
+    'users/partners' => 'PartnerController',
   ]);
 });
 

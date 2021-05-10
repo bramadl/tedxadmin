@@ -26,8 +26,9 @@
                                     <th>No</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>Username</th>
                                     <th>Email Address</th>
+                                    <th>Phone Number</th>
+                                    <th>Street Address</th>
                                     <th>Joined At</th>
                                 </tr>
                             </thead>
@@ -35,15 +36,12 @@
                                 @foreach ($audiens as $key => $audien)
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
-                                    <td>{{ $audien->first_name }}</td>
-                                    <td>{{ $audien->last_name }}</td>
-                                    <td>{{ $audien->username }}</td>
-                                    <td>
-                                        <a href="mailto:{{ $audien->email_address }}">
-                                            {{ $audien->email_address }}
-                                        </a>
-                                    </td>
-                                    <td>{{ $audien->created_at }}</td>
+                                    <td>{{ $audien['first_name'] }}</td>
+                                    <td>{{ $audien['last_name'] }}</td>
+                                    <td><a href="mailto:{{ $audien['email_address'] }}">{{ $audien['email_address'] }}</a></td>
+                                    <td><a href="https://api.whatsapp.com/send?phone=62{{ substr($audien['phone_number'], 1) }}">{{ $audien['phone_number'] }}</a></td>
+                                    <td>{{ $audien['street_address'] }}</td>
+                                    <td>{{ date('d M, Y', strtotime($audien['created_at'])) }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
