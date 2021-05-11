@@ -50,7 +50,7 @@ class PartnerController extends Controller
         ]);
         
         if ($response['success']) {
-            $partner = $request['partner'];
+            $partner = $response['partner'];
             Mail::to($request->email)->send(new UserVerifyMail($partner, $request->email, $response['password']));
             
             return redirect()

@@ -167,7 +167,7 @@
         <tr>
           <td>Email Pengguna</td>
           <td>:</td>
-          <td>{{ $partner['email'] }}</td>
+          <td>{{ $email }}</td>
         </tr>
         <tr>
           <td>Password Pengguna</td>
@@ -177,7 +177,7 @@
         <tr>
           <td>User Role</td>
           <td>:</td>
-          <td>{{ $partner['role'] === 'user' ? 'Audience' : $partner['role'] }}</td>
+          <td>Partner</td>
         </tr>
       </table>
     </div>
