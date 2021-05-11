@@ -172,7 +172,7 @@
         <tr>
           <td>Password Pengguna</td>
           <td>:</td>
-          <td>{{ $partner['password'] }}</td>
+          <td>{{ $password }}</td>
         </tr>
         <tr>
           <td>User Role</td>
