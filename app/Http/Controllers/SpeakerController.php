@@ -42,7 +42,13 @@ class SpeakerController extends Controller
             'street_address' => 'nullable|string'
         ]);
 
-        $response = Http::post($this->url . '/api/speakers', $request->all());
+        $response = Http::post($this->url . '/api/speakers', [
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email_address' => $request->email_address,
+            'phone_number' => $request->phone_number,
+            'street_address' => $request->street_address
+        ]);
 
         if ($response['success']) {
             $speaker = $response['speaker'];

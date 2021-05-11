@@ -37,6 +37,7 @@
                             <tbody>
                                 @php $key = 0 @endphp
                                 @foreach ($payments as $payment)
+                                @if ($payment['payment_status'] === 'confirmed')
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $payment['user']['first_name'] }} {{ $payment['user']['last_name'] }}</td>
@@ -48,6 +49,7 @@
                                     <td>{{ $payment['user_ticket']['code'] }}</td>
                                     <td>{{ $payment['user_ticket']['refresh_token'] }}</td>
                                 </tr>
+                                @endif
                                 @endforeach
                             </tbody>
                         </table>
