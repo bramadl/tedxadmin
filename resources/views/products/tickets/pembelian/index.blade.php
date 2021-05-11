@@ -42,7 +42,7 @@
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $payment['user']['first_name'] }} {{ $payment['user']['last_name'] }}</td>
                                     <td>{{ $payment['user']['email_address'] }}</td>
-                                    <td><a href="https://google.com/search?q={{ $payment['user']['street_address'] }}">{{ $payment['user']['street_address'] }}</a></td>
+                                    <td><a target="_blank" href="https://google.com/search?q={{ $payment['user']['street_address'] }}">{{ $payment['user']['street_address'] }}</a></td>
                                     <td>{{ $payment['ticket']['type'] }}</td>
                                     <td>{{ $payment['ticket']['price'] }}</td>
                                     <td>{{ $payment['user_ticket']['token'] }}</td>
